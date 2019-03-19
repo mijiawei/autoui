@@ -1,0 +1,6 @@
+2019-03-19 12:21:50,点击:WelcomePage: Get Started|true|
+2019-03-19 12:21:52,执行系统命令|/Users/mijiawei/Library/Android/sdk/platform-tools/adb -s 041604d325b02a02 shell am broadcast -a ADB_INPUT_TEXT --es msg zxcvbnm@qatest.com
+2019-03-19 12:21:54,点击:下一步|true|
+2019-03-19 12:21:57,点击:Password输入框|true|
+2019-03-19 12:21:57,执行系统命令|/Users/mijiawei/Library/Android/sdk/platform-tools/adb -s 041604d325b02a02 shell am broadcast -a ADB_INPUT_TEXT --es msg zxcvbnm
+2019-03-19 12:21:59,点击:下一步|true|

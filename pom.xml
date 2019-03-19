@@ -1,0 +1,115 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+	<!-- 项目信息-->
+  <groupId>com.glow</groupId>
+  <artifactId>autoui</artifactId>
+  <version>0.0.2</version>
+  <packaging>jar</packaging>
+  <name>autoui</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+	  <dependency>
+		  <groupId>org.hamcrest</groupId>
+		  <artifactId>hamcrest-library</artifactId>
+		  <version>1.2</version>
+		  <scope>test</scope>
+	  </dependency>
+	  <!--macaca所需要的依赖包-->
+	  <dependency>
+ 		 <groupId>macaca.java</groupId>
+ 		 <artifactId>biz</artifactId>
+ 		 <version>1.1.17</version>
+ 		 <type>jar</type>
+	  </dependency>
+	  <dependency>
+			<groupId>macaca.webdriver.client</groupId>
+			<artifactId>macacaclient</artifactId>
+			<version>2.0</version>
+	  </dependency>
+	  <dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.15</version>
+	  </dependency>
+	  <dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.5.2</version>
+	  </dependency>
+	  <!--打log的依赖包-->
+	  <dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+	  </dependency>
+	  <!-- dom4j xml解析依赖 -->
+	  <dependency>
+		  <groupId>dom4j</groupId>
+		  <artifactId>dom4j</artifactId>
+		  <version>1.6.1</version>
+	  </dependency>
+	  <!--把官方的junit换成testng-->
+	  <dependency>
+		  <groupId>org.testng</groupId>
+		  <artifactId>testng</artifactId>
+		  <version>6.10</version>
+		  <scope>test</scope>
+	  </dependency>
+	  <!-- reportNg的依赖包 关联testNg,这个包的主要作用就是对testng原生报告的美化-->
+	  <dependency>
+		  <groupId>org.uncommons</groupId>
+		  <artifactId>reportng</artifactId>
+		  <version>1.1.4</version>
+		  <scope>test</scope>
+		  <exclusions>
+			  <exclusion>
+				  <groupId>org.testng</groupId>
+				  <artifactId>testng</artifactId>
+			  </exclusion>
+		  </exclusions>
+	  </dependency>
+	  <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+	  <dependency>
+		  <groupId>com.aventstack</groupId>
+		  <artifactId>extentreports</artifactId>
+		  <version>3.0.3</version>
+	  </dependency>
+	  <!--读取INI配置文件的类-->
+	  <dependency>
+		  <groupId>com.nikhaldimann</groupId>
+		  <artifactId>inieditor</artifactId>
+		  <version>r6</version>
+	  </dependency>
+  </dependencies>
+
+	<build>
+		<plugins>
+			<!-- 添加报告插件 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.18.1</version>
+				<configuration>
+					<suiteXmlFiles>
+						<suiteXmlFile>res/testng.xml</suiteXmlFile>
+					</suiteXmlFiles>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

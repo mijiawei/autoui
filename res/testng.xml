@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests" thread-count="1">
+    <listeners>
+        <listener class-name="com.glow.utils.extent.ExtentTestNGITestListener"></listener>
+    </listeners>
+
+    <test name="Testdemo">
+        <parameter name="port" value="3456" />
+        <parameter name="udid" value="041604d325b02a02" />
+        <!--<groups>-->
+        <!--<run>-->
+        <!--<include name="unlogin"></include>-->
+        <!--</run>-->
+        <!--</groups>-->
+        <classes>
+            <class name="com.glow.cases.AndroidCase"></class>
+        </classes>
+    </test>
+
+
+    <!--<test name="TestUnLogin">-->
+    <!--<parameter name="port" value="3456" />-->
+    <!--<parameter name="udid" value="549505cd" />-->
+    <!--<groups>-->
+    <!--<run>-->
+    <!--<include name="unlogin"></include>-->
+    <!--</run>-->
+    <!--</groups>-->
+    <!--<classes>-->
+    <!--<class name="com.jiguanshu.cases.APPandroidCase"></class>-->
+    <!--</classes>-->
+    <!--</test>-->
+
+    <!--<test name="TestNeedLogin">-->
+    <!--<parameter name="port" value="3456" />-->
+    <!--<parameter name="udid" value="621QECPP2APWG" />-->
+    <!--<groups>-->
+    <!--<run>-->
+    <!--<include name="needlogin"></include>-->
+    <!--</run>-->
+    <!--</groups>-->
+    <!--<classes>-->
+    <!--<class name="com.jiguanshu.cases.APPandroidLoginCase"></class>-->
+    <!--</classes>-->
+    <!--</test>-->
+
+
+    <!--<test name="TestFF">-->
+    <!--<groups>-->
+    <!--<run>-->
+    <!--<include name="needlogin"></include>-->
+    <!--</run>-->
+    <!--</groups>-->
+    <!--<classes>-->
+    <!--<class name="com.jiguanshu.cases.APPandroidFFCase"></class>-->
+    <!--</classes>-->
+    <!--</test>-->
+
+</suite>
