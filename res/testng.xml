@@ -7,7 +7,7 @@
 
     <test name="Testdemo">
         <parameter name="port" value="3456" />
-        <parameter name="udid" value="041604d325b02a02" />
+        <parameter name="udid" value="192.168.56.101:5555" />
         <!--<groups>-->
         <!--<run>-->
         <!--<include name="unlogin"></include>-->

@@ -1,4 +1,5 @@
-*.log
+custom.log
+result.log
 /output
 /target
 /screenshot

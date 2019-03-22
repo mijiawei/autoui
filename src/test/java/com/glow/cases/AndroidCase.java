@@ -39,18 +39,19 @@ public class AndroidCase extends BaseTest {
     public void test_000_login(String udid) throws Exception {
         IntroPage IntroPage = new IntroPage("LoginPage");
         IntroPage.setDriver(driver);
-        driver.sleep(15000);
+        driver.sleep(5000);
         driver.onclickBean(IntroPageUI.GetStarted_Btn);
         driver.sleep(2000);
         BaseUtils.exec2("adb -s "+ udid +" shell am broadcast -a ADB_INPUT_TEXT --es msg "+Config.USER_NAME);
         //driver.inputBean(IntroPageUI.Email_Input, Config.USER_NAME);
         driver.onclickBean(IntroPageUI.NextStep_Btn);
         driver.sleep(2000);
+        //driver.inputBean(IntroPageUI.Password_Input,Config.PASSWORD);
         driver.onclickBean(IntroPageUI.Password_Input);
         BaseUtils.exec2("adb -s "+ udid +" shell am broadcast -a ADB_INPUT_TEXT --es msg "+Config.PASSWORD);
         driver.onclickBean(IntroPageUI.NextStep_Btn);
 
-        Assert.assertFalse(IntroPage.hasPageShown(IntroPageUI.Journey_Tab));
+        Assert.assertTrue(IntroPage.hasPageShown(IntroPageUI.Journey_Tab));
 //        if (IntroPage.hasPageShown(IntroPageUI.Journey_Tab)) {
 //            ResultGenerator.loadPageSucc(IntroPage);
 //        } else {
